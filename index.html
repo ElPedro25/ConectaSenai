@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - Etapa 1 de 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Página de Cadastro</h2>
+    <p class="step-indicator">Etapa 1 de 2</p>
+
+    <!-- Indicador de Progresso Visual -->
+    <div class="progress-bar-container">
+      <div class="progress-bar step-1"></div>
+    </div>
+
+    <form id="step1-form" novalidate>
+      <fieldset>
+        <legend>Dados de Acesso</legend>
+
+        <div class="form-group">
+          <label for="email">E-mail *</label>
+          <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+          <span class="error-message" id="email-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-email">Confirmar E-mail *</label>
+          <input type="email" id="confirm-email" name="confirmEmail" placeholder="Confirme seu e-mail" required>
+          <span class="error-message" id="confirm-email-error"></span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-6">
+            <label for="senha">Senha *</label>
+            <input type="password" id="senha" name="senha" placeholder="Mínimo 8 caracteres" required minlength="8">
+            <span class="error-message" id="senha-error"></span>
+          </div>
+
+          <div class="form-group col-6">
+            <label for="confirm-senha">Confirmar Senha *</label>
+            <input type="password" id="confirm-senha" name="confirmSenha" placeholder="Repita a senha" required>
+            <span class="error-message" id="confirm-senha-error"></span>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Dados Pessoais Principais</legend>
+
+        <div class="form-group">
+          <label for="nome-completo">Nome Completo *</label>
+          <input type="text" id="nome-completo" name="nomeCompleto" placeholder="Digite seu nome completo" required>
+          <span class="error-message" id="nome-error"></span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-6">
+            <label for="cpf">CPF *</label>
+            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" maxlength="14" required>
+            <span class="error-message" id="cpf-error"></span>
+          </div>
+
+          <div class="form-group col-6">
+            <label for="data-nascimento">Data de Nascimento *</label>
+            <input type="date" id="data-nascimento" name="dataNascimento" required>
+            <span class="error-message" id="data-error"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="celular">Celular / WhatsApp *</label>
+          <input type="tel" id="celular" name="celular" placeholder="(00) 90000-0000" maxlength="15" required>
+          <span class="error-message" id="celular-error"></span>
+        </div>
+      </fieldset>
+
+      <div class="button-group single-button">
+        <button type="submit" class="btn btn-primary"  ><a href="pagina2.html">Avançar para Etapa 2 &rarr;</button></a>
+        
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
