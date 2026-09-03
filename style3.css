@@ -1,0 +1,38 @@
+/* Esconde elementos dinâmicos */
+.hidden {
+  display: none !important;
+}
+
+/* Caixa do Passo a Passo */
+.guia-linkedin {
+  background-color: #eef6ff;
+  border-left: 4px solid #0077b5; /* Cor oficial do LinkedIn */
+  border-radius: 4px;
+  padding: 15px 20px;
+  margin-top: 15px;
+}
+
+.guia-linkedin h4 {
+  color: #0077b5;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.step-list {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.step-list li {
+  font-size: 0.85rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.step-list a {
+  color: #0077b5;
+  font-weight: bold;
+  text-decoration: underline;
+}
