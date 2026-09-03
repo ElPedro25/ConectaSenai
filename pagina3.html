@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <fieldset>
+  <legend>Perfil Profissional & Portfólio</legend>
+
+  <div class="form-group">
+    <label>Você possui um perfil no LinkedIn para expor seus trabalhos?</label>
+    <div class="radio-group">
+      <label>
+        <input type="radio" name="temLinkedin" value="sim" id="linkedin-sim"> 
+        Sim, já tenho perfil
+      </label>
+      <label>
+        <input type="radio" name="temLinkedin" value="nao" id="linkedin-nao"> 
+        Não, gostaria de criar um
+      </label>
+      <label>
+        <input type="radio" name="temLinkedin" value="ignorar" id="linkedin-ignorar" checked> 
+        Não quero informar agora
+      </label>
+    </div>
+  </div>
+
+  <!-- Campo que aparece se o usuário já tiver LinkedIn -->
+  <div class="form-group hidden" id="campo-linkedin-url">
+    <label for="linkedin-url">Link do seu perfil no LinkedIn</label>
+    <input type="url" id="linkedin-url" name="linkedinUrl" placeholder="https://www.linkedin.com/in/seu-perfil">
+  </div>
+
+  <!-- Guia Passo a Passo que aparece se ele marcar que deseja criar -->
+  <div class="guia-linkedin hidden" id="guia-criar-linkedin">
+    <h4>🚀 Passo a passo para criar seu perfil no LinkedIn:</h4>
+    <ol class="step-list">
+      <li>
+        <strong>Acesse o site oficial:</strong> Acesse <a href="https://www.linkedin.com" target="_blank" rel="noopener">linkedin.com</a> ou baixe o aplicativo no celular.
+      </li>
+      <li>
+        <strong>Crie sua conta:</strong> Clique em "Cadastre-se" e informe seu e-mail e uma senha segura.
+      </li>
+      <li>
+        <strong>Adicione sua foto de perfil:</strong> Escolha uma foto nítida e com boa iluminação (de preferência com fundo neutro).
+      </li>
+      <li>
+        <strong>Preencha suas experiências:</strong> Adicione os cargos que já ocupou e os projetos/trabalhos que desenvolveu.
+      </li>
+      <li>
+        <strong>Copie seu link:</strong> Acesse seu perfil, copie o link da barra do navegador e cole no formulário futuramente!
+      </li>
+    </ol>
+  </div>
+</fieldset>
+<script src="script3.js"></script>
+</body>
+</html>

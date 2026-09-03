@@ -1,0 +1,226 @@
+/* Reinicialização e Fontes */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  /* Fundo escuro com um leve degradê radial em vermelho para profundidade */
+  background: radial-gradient(circle, #2a0404 0%, #8f0e0e 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  color: #1b1b1b;
+  overflow: hidden;
+}
+
+/* Adiciona um efeito de luz neon vermelha no fundo do body */
+body::before {
+  content: '';
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+  z-index: -1;
+  animation: pulseNeonBackground 8s infinite alternate;
+}
+
+@keyframes pulseNeonBackground {
+  0% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Container Principal - Estilo Painel Metálico com Brilho */
+.form-container {
+  background-color: #fdfdfd;
+  background-image: 
+    linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%),
+    url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36z8gAFWNgYGBkgAsgAxDZqFEjAQAsWwkK6Zp9eQAAAABJRU5ErkJggg==');
+  border-radius: 12px;
+  border: 2px solid #330000;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2), inset 0 0 10px rgba(255, 0, 0, 0.1);
+  padding: 35px;
+  width: 100%;
+  max-width: 650px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Título Principal */
+h2 {
+  color: #000000;
+  text-shadow: 0 0 10px rgb(85, 85, 85);
+  font-weight: 800;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+/* Indicador de Passos */
+.step-indicator {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+/* Fieldset */
+fieldset {
+  border: 1px solid #360000;
+  border-radius: 8px;
+  padding: 20px 25px;
+  margin-bottom: 25px;
+  background-color: rgba(255, 0, 0, 0.02);
+}
+
+/* Legend */
+legend {
+  font-weight: 700;
+  color: #ff3333;
+  text-shadow: 0 0 8px rgba(255, 51, 51, 0.6);
+  padding: 0 12px;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+/* Grupos de Formulário */
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.col-2 { flex: 2; }
+.col-4 { flex: 4; }
+.col-5 { flex: 5; }
+.col-8 { flex: 8; }
+
+/* Labels */
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Inputs e Selects */
+input[type="text"],
+select {
+  padding: 12px 16px;
+  background-color: #ffffff;
+  border: 1px solid #444;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #000000;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+  outline: none;
+  border-color: #020202;
+  box-shadow: 0 0 10px rgba(61, 61, 61, 0.5);
+}
+
+select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%2300ffff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095.1c3.6%203.6%205.4%207.8%205.4%2012.8%200-5-1.8-9.3-5.4-12.9z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 15px top 50%;
+  background-size: 12px auto;
+  padding-right: 40px;
+}
+
+/* Grupos de Rádio e Checkbox */
+.radio-group,
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.radio-group label,
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: normal;
+  color: #000000;
+  cursor: pointer;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: #e30613;
+}
+
+/* Grupo de Botões */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 35px;
+}
+
+/* Estilo Base dos Botões */
+.btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* BOTÃO VOLTAR PARA ETAPA 1 - Fundo branco, letra preta, brilho vermelho */
+.btn-secondary {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #e30613;
+  box-shadow: 0 0 15px rgba(227, 6, 19, 0.8); /* Efeito de brilho vermelho */
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+  background-color: #e30613;
+  color: #ffffff;
+  box-shadow: 0 0 25px rgba(227, 6, 19, 1); /* Brilho mais forte no hover/clique */
+}
+
+/* BOTÃO AVANÇAR / FINALIZAR CADASTRO - Fundo preto, texto branco */
+.btn-primary {
+  background-color: #ffffff;
+  color: #ffffff; /* Texto branco (sem o roxo) */
+  border: 2px solid #e30613;
+  box-shadow: 0 0 15px rgba(227, 6, 19, 0.5);
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  background-color: #e30613; /* Fica vermelho ao clicar ou passar o mouse */
+  color: #ffffff;
+  border-color: #e30613;
+  box-shadow: 0 0 25px rgba(227, 6, 19, 1);
+}
